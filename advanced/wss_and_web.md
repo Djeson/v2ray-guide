@@ -69,7 +69,7 @@ server {
         
         # Show realip in v2ray access.log
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header Host $host;
+        #proxy_set_header Host $host; 这条是多余的，整了我好久终于找到问题。
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
 }
